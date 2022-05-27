@@ -13,8 +13,8 @@ class Proxy:
 
     def __init__(self, ):
         self.api_url = api_url
-        self.username = 'a15179737600'
-        self.password = 'p8x7284f'
+        self.username = 'xxx'
+        self.password = 'xxx'
         self._proxy_list = self.get_proxy_lis()
 
     def get_proxy_lis(self):

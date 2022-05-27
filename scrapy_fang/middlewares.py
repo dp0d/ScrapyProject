@@ -51,10 +51,10 @@ class RedirectionMiddleware(object):
 class TUNProxyDownloaderMiddleware:
 
     def process_request(self, request, spider):
-        proxy = "tps553.kdlapi.com:15818"
+        proxy = "tps553.kdlapi.com:xxx"
         request.meta['proxy'] = "http://%(proxy)s" % {'proxy': proxy}
         # 用户名密码认证
-        request.headers['Proxy-Authorization'] = basic_auth_header('t15209935663171', 'obs96q91')  # 白名单认证可注释此行
+        request.headers['Proxy-Authorization'] = basic_auth_header('xxx', 'xxx')  # 白名单认证可注释此行
         request.headers["Connection"] = "close"
         # print('使用代理', request.meta['proxy'], '*' * 200)
         return None
@@ -68,7 +68,7 @@ class My_RetryMiddleware(RetryMiddleware):
             proxy = "tps553.kdlapi.com:15818"
             request.meta['proxy'] = "http://%(proxy)s" % {'proxy': proxy}
             # 用户名密码认证
-            request.headers['Proxy-Authorization'] = basic_auth_header('t15209935663171', 'obs96q91')  # 白名单认证可注释此行
+            request.headers['Proxy-Authorization'] = basic_auth_header('xxx', 'xxx')  # 白名单认证可注释此行
             request.headers["Connection"] = "close"
 
             UserAgent = self.get_head.agent_head()['User-Agent']
